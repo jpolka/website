@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jessica Polka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:    #f7f4ef;
+      --tan:      #e8e0d0;
+      --warm-mid: #c9b99a;
+      --brown:    #7a6450;
+      --dark:     #2e2419;
+      --text:     #3d2e1e;
+      --max-w:    860px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--cream);
+    }
+    nav {
+      position: sticky; top: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--tan);
+      z-index: 100; padding: 0 2rem;
+    }
+    nav .inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; height: 56px;
+    }
+    nav .name { font-size: 1.1rem; font-weight: 500; color: var(--dark); text-decoration: none; letter-spacing: 0.01em; }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a { text-decoration: none; color: var(--brown); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; transition: color 0.2s; }
+    nav ul a:hover { color: var(--dark); }
+    main { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+    section { padding: 4rem 0; }
+    section + section { border-top: 1px solid var(--tan); }
+    #about { display: grid; grid-template-columns: 200px 1fr; gap: 3rem; align-items: start; }
+    .headshot-wrap img { width: 200px; height: 240px; object-fit: cover; object-position: top center; display: block; border-radius: 4px; box-shadow: 0 4px 24px rgba(122,100,80,0.18); }
+    .bio h1 { font-size: 2.2rem; font-weight: 500; color: var(--dark); line-height: 1.2; margin-bottom: 0.2rem; letter-spacing: -0.01em; }
+    .bio .affiliations { font-size: 0.85rem; font-weight: 400; color: var(--brown); letter-spacing: 0.03em; margin-bottom: 1.5rem; line-height: 1.5; }
+    .bio .affiliations span { display: block; }
+    .bio p { color: var(--text); margin-bottom: 1rem; font-weight: 300; }
+    .bio p:last-of-type { margin-bottom: 0; }
+    .contact-links { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; }
+    .contact-links a { color: var(--brown); text-decoration: none; font-size: 0.82rem; font-weight: 400; letter-spacing: 0.02em; border-bottom: 1px solid var(--warm-mid); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+    .contact-links a:hover { color: var(--dark); border-color: var(--dark); }
+    .section-label { font-size: 1.4rem; font-weight: 500; color: var(--dark); margin-bottom: 1.75rem; letter-spacing: -0.01em; }
+    .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .work-card { background: #fff; border: 1px solid var(--tan); border-radius: 6px; padding: 1.5rem; transition: box-shadow 0.2s; }
+    .work-card:hover { box-shadow: 0 4px 20px rgba(122,100,80,0.12); }
+    .work-card .tag { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--warm-mid); margin-bottom: 0.4rem; }
+    .work-card h3 { font-size: 1rem; font-weight: 500; color: var(--dark); margin-bottom: 0.5rem; line-height: 1.3; }
+    .work-card p { font-size: 0.88rem; color: var(--text); line-height: 1.6; font-weight: 300; }
+    .work-card a { display: inline-block; margin-top: 0.75rem; font-size: 0.78rem; font-weight: 400; color: var(--brown); text-decoration: none; border-bottom: 1px solid var(--warm-mid); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+    .work-card a:hover { color: var(--dark); border-color: var(--dark); }
+    footer { border-top: 1px solid var(--tan); padding: 2rem; text-align: center; font-size: 0.78rem; color: var(--warm-mid); font-weight: 300; }
+    @media (max-width: 640px) {
+      #about { grid-template-columns: 1fr; gap: 1.75rem; }
+      .headshot-wrap img { width: 140px; height: 168px; }
+      .work-grid { grid-template-columns: 1fr; }
+      nav ul { gap: 1.25rem; }
+      .bio h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="inner">
+      <a class="name" href="#about">Jessica Polka</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <section id="about">
+      <div class="headshot-wrap">
+        <img src="images/headshot.jpg" alt="Jessica Polka" />
+      </div>
+      <div class="bio">
+        <h1>Jessica Polka</h1>
+        <div class="affiliations">
+          <span>Senior Program Lead, MIT Open Learning</span>
+          <span>Open Science Advocate</span>
+        </div>
+        <p>My goal is to accelerate scientific discovery by improving how researchers communicate and collaborate.</p>
+        <p>At MIT Open Learning, I work to expand access to knowledge and strengthen the open knowledge ecosystem. Previously, as Open Science Program Director at Astera Institute, I supported entrepreneurs building new technologies for openly sharing knowledge. Before that, as founding Executive Director of ASAPbio, I led a researcher-driven nonprofit to advance the use of preprints and open peer review in the life sciences.</p>
+        <p>My interest in improving biomedical research communication stems from my academic background in biochemistry and synthetic biology — PhD from UCSF, postdoctoral fellowship at Harvard Medical School.</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/jessicapolka/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=1-zuY14AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://orcid.org/0000-0001-6610-9293" target="_blank" rel="noopener">ORCID</a>
+          <a href="mailto:jessica.polka@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+    <section id="work">
+      <h2 class="section-label">Work &amp; Research</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="tag">Current</div>
+          <h3>MIT Open Learning</h3>
+          <p>Senior Program Lead (December 2025–present). Working on initiatives that broaden access to education and strengthen the open knowledge ecosystem.</p>
+          <a href="https://openlearning.mit.edu" target="_blank" rel="noopener">MIT Open Learning →</a>
+        </div>
+        <div class="work-card">
+          <div class="tag">Previous</div>
+          <h3>Astera Institute</h3>
+          <p>Open Science Program Director (2024–2025). Supported entrepreneurs building new technologies for openly sharing knowledge.</p>
+          <a href="https://astera.org/residency/open-science/" target="_blank" rel="noopener">Astera Open Science →</a>
+        </div>
+        <div class="work-card">
+          <div class="tag">Previous</div>
+          <h3>ASAPbio</h3>
+          <p>Co-founder and Executive Director (2016–2024). Led a researcher-driven nonprofit to advance preprints and open peer review in the life sciences.</p>
+          <a href="https://asapbio.org" target="_blank" rel="noopener">ASAPbio →</a>
+        </div>
+        <div class="work-card">
+          <div class="tag">Research</div>
+          <h3>Scholarly Communication</h3>
+          <p>Research and writing on publishing reform, research culture, and open science policy. 3,700+ citations on Google Scholar.</p>
+          <a href="https://scholar.google.com/citations?user=1-zuY14AAAAJ&hl=en" target="_blank" rel="noopener">Publications →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>&copy; 2026 Jessica Polka</footer>
+</body>
+</html>
